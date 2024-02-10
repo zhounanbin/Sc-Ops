@@ -6,10 +6,10 @@ RUN mkdir -p /sc/sentinel
 
 WORKDIR /sc/sentinel
 
-EXPOSE 8858
+EXPOSE 8080
 
 ADD ./sentinel-dashboard-1.8.7.jar ./app.jar
 
-ENTRYPOINT ["java", "-Dserver.port=8858", "-Dcsp.sentinel.dashboard.server=localhost:8858", "-Dproject.name=sentinel-dashboard", "-Dsentinel.dashboard.auth.password=sentinel#sc2024QWE!"]
+ENTRYPOINT ["java", "-Dserver.port=8080", "-Dcsp.sentinel.dashboard.server=localhost:8080", "-Dproject.name=sentinel-dashboard", "-Dsentinel.dashboard.auth.password=sentinel#sc2024QWE!"]
 
 CMD ["-jar","app.jar"]
