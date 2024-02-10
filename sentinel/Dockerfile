@@ -6,7 +6,7 @@ RUN mkdir -p /sc/sentinel
 
 WORKDIR /sc/sentinel
 
-EXPOSE 8080
+EXPOSE 8858
 
 ADD ./sentinel-dashboard-1.8.7.jar ./app.jar
 
